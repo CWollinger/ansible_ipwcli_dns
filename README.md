@@ -7,7 +7,7 @@ Manage DNS records for the Ericsson IPWorks DNS server. The module will use the 
 
 | Parameter | Type | required | Choices/Defaults |  Comments |
 | --------- | ---- |-------- | ----------------- |  -------- |
-| address      | string   |          |                                        |	The IP address for the A record. Required for `type=A`			|
+| address      | string   |          |                                        |	The IP address for the A or AAAA record. Required for `type=A` or `type=AAAA`		|
 | container    | string   | required |                                        |	Sets the container zone for the record.			|
 | dnsname      | string   | required |                                        |	Name of the record.			|
 | flags        | string   |          | Choices: S,A,U,P                       |	Sets one of the possible flags of NAPTR record.			|
@@ -21,7 +21,7 @@ Manage DNS records for the Ericsson IPWorks DNS server. The module will use the 
 | state        | string   |          | Choices: absent, present (<- default)  |	Whether the record should exist or not.			|
 | target       | string   |          |                                        |	Sets the target of the SRV record. Required for `type=SRV`			|
 | ttl          | integer   |         | Default: 3600                          |	Sets the ttl of the record.			|
-| type         | string   | required |                                        |	Type of the record.			|
+| type         | string   | required | Choices: NAPTR, SRV, A, AAAA           |	Type of the record.			|
 | user         | string   | required |                                        |	Username to login on ipwcli.			|
 | weight       | integer   |         | Default: 10                            |	Sets the weight of the SRV record.			|
 
