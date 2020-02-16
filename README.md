@@ -22,7 +22,7 @@ Manage DNS records for the Ericsson IPWorks DNS server. The module will use the 
 | target       | string   |          |                                        |	Sets the target of the SRV record. Required for `type=SRV`			|
 | ttl          | integer   |         | Default: 3600                          |	Sets the ttl of the record.			|
 | type         | string   | required | Choices: NAPTR, SRV, A, AAAA           |	Type of the record.			|
-| user         | string   | required |                                        |	Username to login on ipwcli.			|
+| username         | string   | required |                                    |	Username to login on ipwcli.			|
 | weight       | integer   |         | Default: 10                            |	Sets the weight of the SRV record.			|
 
 ## Notes
